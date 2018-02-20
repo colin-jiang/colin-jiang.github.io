@@ -153,6 +153,7 @@ header {
     animation-duration: 0.75s;
 
     ul {
+        font-weight: 300;
         display: block;
         background: white;
         text-align: right;
@@ -250,6 +251,8 @@ footer {
     p {
         margin: 0;
         color: $text;
+        font-size: 14px;
+        font-weight: 300;
     }
 }
 
@@ -452,7 +455,7 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
+    padding: 110px 15px 75px 15px;
     border-bottom: 1px solid $border;
 
     h2 {
@@ -556,7 +559,7 @@ footer {
     background: $base-color;
     border-radius: 50%;
     float: left;
-    z-index: 99;
+    z-index: 0;
     margin-left: 280px;
 
     i {
@@ -751,6 +754,8 @@ footer {
     margin: 0 auto;
 
     input, textarea {
+        font-weight: 300;
+        font-size: 14px;
         display: block;
         width: 100%;
         padding: 10px;
@@ -783,7 +788,7 @@ footer {
         padding: 5px 10px;
         border: none;
         color: $base-color;
-        font-weight: 700;
+        font-weight: 400;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         @include transition();
 

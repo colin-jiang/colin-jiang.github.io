@@ -76,6 +76,44 @@
 
     });
 
+    var $window = $(window);
+    var $elem1 = $(".vtimeline-content:eq(0)")
+    var $elem2 = $(".vtimeline-content:eq(1)")
+    var $elem3 = $(".vtimeline-content:eq(2)")
+    var $elem4 = $(".project:eq(0)")
+    var $elem5 = $(".project:eq(1)")
+    var $elem6 = $(".project:eq(2)")
+
+    function isScrolledIntoView($elem, $window) {
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+
+        return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+    }
+    $(document).on("scroll", function () {
+        if (isScrolledIntoView($elem1, $window)) {
+            $elem1.addClass("animate")
+        }
+        if (isScrolledIntoView($elem2, $window)) {
+            $elem2.addClass("animate")
+        }
+        if (isScrolledIntoView($elem3, $window)) {
+            $elem3.addClass("animate")
+        }
+        if (isScrolledIntoView($elem4, $window)) {
+            $elem4.addClass("animate")
+        }
+        if (isScrolledIntoView($elem5, $window)) {
+            $elem5.addClass("animate")
+        }
+        if (isScrolledIntoView($elem6, $window)) {
+            $elem6.addClass("animate")
+        }
+    });
+
     // Open mobile menu
     $('#mobile-menu-open').click(function() {
         $('header, body').addClass('active');

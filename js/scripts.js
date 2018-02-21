@@ -15,25 +15,28 @@
     // Remove no-js class
     $('html').removeClass('no-js');
 
+    if(document.location.href.match(/[^\/]+$/)[0] == "index.html")
+    {
     // Animate to section when nav is clicked
-    $('header a').click(function(e) {
-
-        // Treat as normal link if no-scroll class
-        if ($(this).hasClass('no-scroll')) return;
-
-        e.preventDefault();
-        var heading = $(this).attr('href');
-        var scrollDistance = $(heading).offset().top;
-
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
-
-        // Hide the menu once clicked if mobile
-        if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
-        }
-    });
+        $('header a').click(function(e) {
+    
+            // Treat as normal link if no-scroll class
+            if ($(this).hasClass('no-scroll')) return;
+    
+            e.preventDefault();
+            var heading = $(this).attr('href');
+            var scrollDistance = $(heading).offset().top;
+    
+            $('html, body').animate({
+                scrollTop: scrollDistance + 'px'
+            }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+    
+            // Hide the menu once clicked if mobile
+            if ($('header').hasClass('active')) {
+                $('header, body').removeClass('active');
+            }
+        });
+    }
 
     // Scroll to top
     $('#to-top').click(function() {
@@ -94,22 +97,22 @@
         return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
     }
     $(document).on("scroll", function () {
-        if (isScrolledIntoView($elem1, $window)) {
+        if ($elem1.length!=0 && (isScrolledIntoView($elem1, $window))) {
             $elem1.addClass("animate")
         }
-        if (isScrolledIntoView($elem2, $window)) {
+        if ($elem2.length!=0 && (isScrolledIntoView($elem2, $window))) {
             $elem2.addClass("animate")
         }
-        if (isScrolledIntoView($elem3, $window)) {
+        if ($elem3.length!=0 && (isScrolledIntoView($elem3, $window))) {
             $elem3.addClass("animate")
         }
-        if (isScrolledIntoView($elem4, $window)) {
+        if ($elem4.length!=0 && (isScrolledIntoView($elem4, $window))) {
             $elem4.addClass("animate")
         }
-        if (isScrolledIntoView($elem5, $window)) {
+        if ($elem5.length!=0 && (isScrolledIntoView($elem5, $window))) {
             $elem5.addClass("animate")
         }
-        if (isScrolledIntoView($elem6, $window)) {
+        if ($elem6.length!=0 && (isScrolledIntoView($elem6, $window))) {
             $elem6.addClass("animate")
         }
     });

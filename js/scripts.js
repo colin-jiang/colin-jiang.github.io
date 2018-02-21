@@ -15,7 +15,7 @@
     // Remove no-js class
     $('html').removeClass('no-js');
 
-    if(document.location.href.match(/[^\/]+$/)[0] == "index.html")
+    if(document.location.href.match(/[^\/]+$/) && document.location.href.match(/[^\/]+$/)[0] == "index.html")
     {
     // Animate to section when nav is clicked
         $('header a').click(function(e) {

@@ -15,6 +15,7 @@
     // Remove no-js class
     $('html').removeClass('no-js');
 
+    console.log(document.location.pathname.match(/[^\/]+$/)[0])
     if((document.location.pathname.match(/[^\/]+$/) && document.location.pathname.match(/[^\/]+$/)[0] == "index.html") || (document.location.pathname.match(/[^\/]+$/) && document.location.pathname.match(/[^\/]+$/)[0] == ""))
     {
     // Animate to section when nav is clicked

@@ -530,6 +530,7 @@ footer {
     padding: 15px;
     border-radius: 3px;
     text-align: left;
+    -webkit-backface-visibility: hidden;
     visibility: hidden;
 
     &.animate {
@@ -538,6 +539,7 @@ footer {
       animation-timing-function: ease;
       animation-duration: 1.25s;
       visibility: visible;
+
     }
 
     h3 {

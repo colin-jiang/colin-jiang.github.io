@@ -83,9 +83,10 @@
     var $elem1 = $(".vtimeline-content:eq(0)")
     var $elem2 = $(".vtimeline-content:eq(1)")
     var $elem3 = $(".vtimeline-content:eq(2)")
-    var $elem4 = $(".project:eq(0)")
-    var $elem5 = $(".project:eq(1)")
-    var $elem6 = $(".project:eq(2)")
+    var $elem4 = $(".vtimeline-content:eq(3)")
+    var $elem5 = $(".project:eq(0)")
+    var $elem6 = $(".project:eq(1)")
+    var $elem7 = $(".project:eq(2)")
 
     function isScrolledIntoView($elem, $window) {
         var docViewTop = $window.scrollTop();
@@ -114,6 +115,9 @@
         }
         if ($elem6.length!=0 && (isScrolledIntoView($elem6, $window))) {
             $elem6.addClass("animate")
+        }
+        if ($elem7.length!=0 && (isScrolledIntoView($elem7, $window))) {
+            $elem7.addClass("animate")
         }
     });
 

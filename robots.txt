@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow: /images/
+Disallow: /colors.jpg
+Disallow: /hand.jpg
+Disallow: /eyes.jpg
+Disallow: /pose1.jpg
+Disallow: /pose2.jpg
+Disallow: /tree.jpg
+Disallow: /still.jpg
+Disallow: /watercolor.jpg
